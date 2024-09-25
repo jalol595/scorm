@@ -28,6 +28,7 @@ spring:
 server:
   tomcat:
     max-swallow-size: 200MB
+  port: 7007
 
 scorm:
   storage:
