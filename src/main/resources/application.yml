@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: yana-scormda-nima-qilay-oxshamayapti
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/scorm_db
+    username: postgres
+    password: 1234
+    hikari:
+      auto-commit: false
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      properties:
+        hibernate.jdbc.lob.non_contextual_creation: true
+    show-sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+
+  web:
+    resources:
+      static-locations: classpath:/scorm_packages/
+
+server:
+  tomcat:
+    max-swallow-size: 200MB
+
+scorm:
+  storage:
+    path: scorm_packages/
+
